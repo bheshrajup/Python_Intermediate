@@ -52,21 +52,51 @@ print(f"The person's keys are: {Aperson.keys()}")
 print(f"The person's values are: {Aperson.values()}")
 print(f"The person's items are: {Aperson.items()}") #gives the key value pair output
 
+Aperson["age"]=20 #update
+print(f"After changing the value of age=>{Aperson}")
+
+Aperson.update({"height":170}) #add
+print(f"After adding height=>{Aperson}")
+
+Aperson.update({"age":21}) #update
+print(f"After updating the age=>{Aperson}")
+
+#Updating multiple key-value at once using comma
+Aperson.update({"first_name":"Bheshraj","last_name":"Upadhyaya"})
+print(f"After updating the first and last name at once=> {Aperson}")
+
+Aperson["age"]=15 #update
+
+if Aperson["age"]>12 and Aperson["age"]<20:
+    print(f"The data of a person is a teenager")
+
+if Aperson["height"]>100:
+    print(f"The person is tall")
+
+# print(f"Using a keyname that is not present=>{Aperson.get("hairColor","blue")}")
+
+print(f"--------------Check for existence of key name---------------")
+
+if "points" in Aperson:
+    print(f"The point key exists")
+else:
+    print(f"The point key doesn't exist")
 
 
-person2 = dict(
-    first_name="John",
-    last_name="Doe",
-    age=23,
-    job="Software Engineer",)
-# job="Teacher" )#Duplicate key will not allowed
 
-# Dictionary type because key-value pair
-print(f"Type of Aperson is: {type(person2)}")
-print(f"Person is:{[person2]}")
-# cannot use number for key
-# 10="Ten" #SyntaxError: can't assign to literal
-# underscore is allowed
-# _10="Ten" #No error
+# person2 = dict(
+#     first_name="John",
+#     last_name="Doe",
+#     age=23,
+#     job="Software Engineer",)
+# # job="Teacher" )#Duplicate key will not allowed
+
+# # Dictionary type because key-value pair
+# print(f"Type of Aperson is: {type(person2)}")
+# print(f"Person is:{[person2]}")
+# # cannot use number for key
+# # 10="Ten" #SyntaxError: can't assign to literal
+# # underscore is allowed
+# # _10="Ten" #No error
 
 
