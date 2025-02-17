@@ -13,6 +13,7 @@ def showMessage(msg):
 #     result = number1+ number2
 #     print(f"The sum of two numbers is => {result}")
 
+
 # calling hello() function
 hello()
 showMessage("Hello from the parameter!")
@@ -25,7 +26,7 @@ print(f"x+y={x+y}")
 # sum("Bheshraj","Upadhyaya")
 
 
-# def sum(number1: int, number2:int): #parameterized 
+# def sum(number1: int, number2:int): #parameterized
 #     result = number1+ number2
 #     print(f"The sum of two numbers is => {result}")
 
@@ -33,18 +34,28 @@ print(f"x+y={x+y}")
 #     result = number1+ number2
 #     print(f"The sum of two numbers is => {result}")
 
-def sum(number1=2, number2=3): #default parameter value
-    result = number1+ number2
+def sum(number1=2, number2=3):  # default parameter value
+    result = number1 + number2
     print(f"The sum of two numbers is => {result}")
 
 
+def subtract(number1=2, number2=3):  # default parameter value
+    result = number1 - number2
+    print(f"The difference of two numbers is => {result}")
+
+
 # sum([1,2,3],[4,5,6])
-sum("Hello","world")
-sum("HI","hello") 
+sum("Hello", "world")
+sum("HI", "hello")
 # # sum([1,2,3],(4,5,6)) #error
 
-sum(5)  #considered for number1, the number2 have default value
-# sum() error 
+sum(5)  # considered for number1, the number2 have default value
+# sum() error
 
-#What if i want to pass value for number2 not make number1 default parameter
+# What if i want to pass value for number2 not make number1 default parameter
+# sum(4) want to use 4 for number2
+sum(number2=4)  # keyword(named) arguments are used
 
+subtract()
+subtract(5, 6)
+subtract(number1=30,number2=10)
