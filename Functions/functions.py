@@ -54,6 +54,49 @@ def showKeywordValues(**kwargs):  # Arbitary keyword arguments
         print(item)
 
 
+def showMix(*args,**kwargs): #Mix arbitery arguments (*args is as tuple){**kwargs as dictionary}
+    print("--------args----------")
+    for item in args:
+        print(item)
+    
+    print("-------kwargs---------")
+    for k,v in kwargs.items():
+        print(f"{k}:{v}")
+
+#errorr when kwargs are before args
+# def showMix2(**kwargs,*args): #Mix arbitery arguments (*args is as tuple){**kwargs as dictionary}
+#     print("--------args----------")
+#     for item in args:
+#         print(item)
+    
+#     print("-------kwargs---------")
+#     for k,v in kwargs.items():
+#         print(f"{k}:{v}")
+
+
+#error cannot use other paramters
+# def showMix3(**kwargs,number): #Mix arbitery arguments (*args is as tuple){**kwargs as dictionary}
+#     print("--------args----------")
+#     for item in args:
+#         print(item)
+    
+#     print("-------kwargs---------")
+#     for k,v in kwargs.items():
+#         print(f"{k}:{v}")
+
+
+#no error when parameter is used before kwargs
+# def showMix4(number,**kwargs): #Mix arbitery arguments (*args is as tuple){**kwargs as dictionary}
+#     print("--------args----------")
+#     for item in args:
+#         print(item)
+    
+#     print("-------kwargs---------")
+#     for k,v in kwargs.items():
+#         print(f"{k}:{v}")
+
+
+
 # sum([1,2,3],[4,5,6])
 sum("Hello", "world")
 sum("HI", "hello")
@@ -75,6 +118,8 @@ showValues("hello", "friend", 1, 2, 3, 4)
 
 
 showKeywordValues(name="John", age=20, job="Student")
-showKeywordValues()
+showKeywordValues() #no error
+showValues() #no error
 
-showValues()
+showMix(1,2,3,name="Bheshraj",Cast="Hero")
+# showMix(1,2,3,name="Bheshraj",Cast="Hero",4,5,6) #error
