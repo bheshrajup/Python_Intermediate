@@ -44,8 +44,13 @@ def subtract(number1=2, number2=3):  # default parameter value
     print(f"The difference of two numbers is => {result}")
 
 
-def showValues(*values):  #Arbitary arguments(*args)
+def showValues(*values):  # Arbitary arguments(*args)
     for item in values:
+        print(item)
+
+
+def showKeywordValues(**kwargs):  # Arbitary keyword arguments
+    for item in kwargs.items():
         print(item)
 
 
@@ -63,7 +68,13 @@ sum(number2=4)  # keyword(named) arguments are used(kwargs)
 
 subtract()
 subtract(5, 6)
-subtract(number1=30,number2=10)
+subtract(number1=30, number2=10)
 
-showValues(1,2,2,4,5,6,7,8)
-showValues("hello","friend",1,2,3,4)
+showValues(1, 2, 2, 4, 5, 6, 7, 8)
+showValues("hello", "friend", 1, 2, 3, 4)
+
+
+showKeywordValues(name="John", age=20, job="Student")
+showKeywordValues()
+
+showValues()
