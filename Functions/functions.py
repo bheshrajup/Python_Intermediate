@@ -44,6 +44,11 @@ def subtract(number1=2, number2=3):  # default parameter value
     print(f"The difference of two numbers is => {result}")
 
 
+def showValues(*values):  #Arbitary arguments(*args)
+    for item in values:
+        print(item)
+
+
 # sum([1,2,3],[4,5,6])
 sum("Hello", "world")
 sum("HI", "hello")
@@ -54,8 +59,11 @@ sum(5)  # considered for number1, the number2 have default value
 
 # What if i want to pass value for number2 not make number1 default parameter
 # sum(4) want to use 4 for number2
-sum(number2=4)  # keyword(named) arguments are used
+sum(number2=4)  # keyword(named) arguments are used(kwargs)
 
 subtract()
 subtract(5, 6)
 subtract(number1=30,number2=10)
+
+showValues(1,2,2,4,5,6,7,8)
+showValues("hello","friend",1,2,3,4)
