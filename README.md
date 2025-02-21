@@ -29,9 +29,8 @@ D/Python_Intermediate:
 
 ## Requirements
 Ensure you have Python installed on your system. You can verify this by running:
-```bash
-    python --version
-##
+```sh
+python --version 
 
 
 
